@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>עתר – קליניקה לטיפול טבעי</title>
+  <meta name="description" content="קליניקה לטיפול טבעי בגישה הוליסטית: מגע, נשימה, תזונה ותנועה. טיפול עדין המותאם אישית לנשים וגברים בכל הגילאים." />
+  <meta name="theme-color" content="#f7f7fb" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="עתר – קליניקה לטיפול טבעי" />
+  <meta property="og:description" content="טיפול טבעי עדין ומותאם אישית. קבעו תור עוד היום." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="atar.jpg" />
+  <meta property="og:locale" content="he_IL" />
+
+  <!-- Heebo font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { heebo: ["Heebo", "system-ui", "Arial", "sans-serif"] },
+          colors: {
+            base: {
+              50: '#fbfdff',
+              100: '#f5f8fb',
+              200: '#eaf0f6',
+              300: '#dfe9f1',
+              400: '#cfdbe6',
+              500: '#b9c8d6',
+              600: '#8ba3b8',
+              700: '#6a889f',
+              800: '#4b6a82',
+              900: '#2f4d66',
+            },
+            mint: {
+              50: '#f3fbf8',
+              100: '#e6f7f1',
+              200: '#d0f0e5',
+              300: '#b8e6d6',
+              400: '#96d7c1',
+              500: '#6fc4a6',
+              600: '#4ba486',
+              700: '#3a826a',
+              800: '#2f6856',
+              900: '#254f43',
+            }
+          },
+          boxShadow: {
+            soft: '0 8px 30px rgba(20, 40, 80, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root{color-scheme: light;}
+    html,body{scroll-behavior:smooth}
+  </style>
+  <!-- Schema.org (LocalBusiness / HealthAndBeautyBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "עתר – קליניקה לטיפול טבעי",
+    "image": ["atar.jpg"],
+    "description": "קליניקה לטיפול טבעי בגישה הוליסטית: מגע, נשימה, תזונה ותנועה.",
+    "url": "https://example.com",
+    "telephone": "+972-50-0000000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "רח׳ הדוגמה 10",
+      "addressLocality": "תל אביב",
+      "postalCode": "0000000",
+      "addressCountry": "IL"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    }]
+  }
+  </script>
+</head>
+<body class="bg-base-50 font-heebo text-slate-800 selection:bg-mint-200/60">
+  <!-- Top bar -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-base-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded-2xl bg-mint-200 border border-mint-300 shadow-soft grid place-items-center">
+            <span class="text-mint-800 font-semibold">א</span>
+          </div>
+          <span class="font-semibold text-slate-800">עתר – טיפול טבעי</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-slate-700">
+          <a href="#services" class="hover:text-mint-700">טיפולים</a>
+          <a href="#about" class="hover:text-mint-700">עלי</a>
+          <a href="#methods" class="hover:text-mint-700">הקליניקה שלנו</a>
+          <a href="#faq" class="hover:text-mint-700">שאלות נפוצות</a>
+          <a href="#contact" class="px-4 py-2 rounded-xl bg-mint-600 text-white hover:bg-mint-700 transition">קביעת תור</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-base-300 hover:bg-base-100" aria-label="פתח תפריט">
+          <span id="menuIcon" aria-hidden="true">☰</span>
+        </button>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden pb-3">
+        <nav class="grid gap-2 text-slate-700">
+          <a href="#services" class="px-3 py-2 rounded-lg hover:bg-base-100">טיפולים</a>
+          <a href="#about" class="px-3 py-2 rounded-lg hover:bg-base-100">עלי</a>
+          <a href="#methods" class="px-3 py-2 rounded-lg hover:bg-base-100">הקליניקה שלנו</a>
+          <a href="#faq" class="px-3 py-2 rounded-lg hover:bg-base-100">שאלות נפוצות</a>
+          <a href="#contact" class="px-3 py-2 rounded-lg bg-mint-600 text-white">קביעת תור</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+<section id="home" class="relative overflow-hidden">
+  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-mint-100 via-base-100 to-base-50"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-slate-900">
+          טיפול טבעי עדין,<br class="hidden sm:block"> המותאם בדיוק לך
+        </h1>
+        <p class="mt-4 text-lg text-slate-700 max-w-xl">ד"ר עתר - הרצאות והעשרה לבני הגיל השלישי</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#contact" class="px-5 py-3 rounded-xl bg-mint-600 text-white hover:bg-mint-700 shadow-soft">קביעת תור</a>
+          <a href="https://wa.me/972507852167" class="px-5 py-3 rounded-xl border border-base-300 hover:bg-base-100" aria-label="וואטסאפ">שלחו הודעה ב-WhatsApp</a>
+        </div>
+        <ul class="mt-8 grid sm:grid-cols-3 gap-4 text-sm text-slate-600">
+          <li class="p-3 rounded-xl bg-white border border-base-200 shadow-soft">✔️ מותאם אישית</li>
+          <li class="p-3 rounded-xl bg-white border border-base-200 shadow-soft">✔️ מגע עדין ומדויק</li>
+          <li class="p-3 rounded-xl bg-white border border-base-200 shadow-soft">✔️ כלים לבית</li>
+        </ul>
+
+        <!-- טקסט חדש אחרי שלושת ה־✔️ -->
+        <div class="mt-10 text-slate-700 leading-relaxed space-y-4">
+          <h2 class="text-xl sm:text-2xl font-semibold text-slate-900">חכמת הטבע – הרצאות והעשרה לבני הגיל השלישי</h2>
+          <p>
+            חכמת הטבע הינה חברה ששמה לה למטרה לקדם את איכות חייהם של בני גיל הזהב, באמצעות פיתוח תוכניות העשרה, הרצאות, סדנאות וחוגים. 
+            לשירותנו עומדים מרצים, מטפלים מוסמכים ומדריכים מקצועיים, מלאים בנתינה וסבלנות ובעלי השכלה אקדמית רחבה, המתמחים בנושאים מגוונים. 
+            ייחודה של "חכמת הטבע" בגמישותה וביכולתה להתאים פעילויות איכותיות ומקצועיות לכל מסגרת ולקהל יעד. תוכן המפגשים הינו עיוני וחווייתי, 
+            ומאפשר נגיעה ולמידה באמצעות כלל החושים.
+          </p>
+          <p>
+            חברתנו נותנת שירותיה במכללות, בפורומים עובדים עובדי סיעוד, בדיור מוגן, במרכזי יום, מועדונים קהילתיים ומסגרות נוספות המיועדות לגיל הזהב.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="aspect-[4/5] max-w-md lg:max-w-lg mx-auto rounded-3xl overflow-hidden border border-base-200 shadow-soft bg-white">
+          <!-- שימי את הקובץ atar.jpg בתיקייה יחד עם ה-HTML -->
+          <img src="atar.jpg" alt="עתר – המטפלת" class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute -bottom-4 -left-2 bg-white/80 backdrop-blur border border-base-200 rounded-2xl px-4 py-2 shadow-soft text-sm">מוסמכת טיפול מגע משולב</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Services -->
+<section id="services" class="py-16 lg:py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-right">
+    <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900 mb-4">חכמת הטבע – הקליניקה</h2>
+    <p class="text-slate-700 leading-relaxed">
+      בקיבוץ גבעת השלושה פועלת קליניקה טיפולית המהווה תחום שירות נוסף של "חכמת הטבע". 
+      הקליניקה ממוקמת במקום פסטורלי, שקט וירוק, והיא מהווה מרחב חווייתי ומרפא – מקום שבו הגוף והנפש מקבלים תמיכה, חיזוק והתחדשות.
+    </p>
+
+    <p class="mt-4 text-slate-700 leading-relaxed">
+      בקליניקה ניתנים טיפולים אישיים ומקצועיים, המותאמים באופן אישי לצורכי המטופלים. בין מגוון הטיפולים:
+    </p>
+
+    <ul class="mt-6 space-y-4 text-slate-700 leading-relaxed list-disc pr-6">
+      <li>
+        <strong>רפלקסולוגיה –</strong> טיפול מקצועי וממוקד דרך כפות הרגליים, המשפיע על מערכות הגוף ותורם לאיזון כללי.
+      </li>
+      <li>
+        <strong>עיסוי רקמות עמוק –</strong> מגע אינטנסיבי החודר לשכבות השריר העמוקות, משחרר מתחים, מפחית כאבים ומחזיר לגוף חיוניות.
+      </li>
+      <li>
+        <strong>כוסות רוח –</strong> טכניקה מסורתית לשיפור זרימת הדם, הפחתת כאבים ושחרור חסימות אנרגטיות.
+      </li>
+      <li>
+        <strong>תרגול נשימה –</strong> עבודה מעשית עם טכניקות נשימה המסייעות להרפיה, חיזוק מערכת החיסון ושיפור החוסן הגופני והנפשי.
+      </li>
+    </ul>
+  </div>
+</section>
+
+  <!-- About -->
+  <section id="about" class="py-16 lg:py-20 bg-gradient-to-b from-base-100 to-base-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-[1fr,1.3fr] gap-10 items-center">
+        <div class="order-2 lg:order-1">
+          <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">נעים מאוד, עמרי וייס</h2>
+          <p class="mt-4 text-slate-700 leading-8">היסטוריון וחוקר תרבות
+מעסה בכיר (רקמות עמוקות).
+ מומחה לתרפיה בנשימה</p>
+          <ul class="mt-6 grid gap-3 text-slate-700">
+            <!-- <li>• ניסיון בעבודה עם נשים וגברים בכל הגילאים</li>
+            <li>• ת</li> -->
+          </ul>
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="aspect-[16/12] rounded-3xl overflow-hidden border border-base-200 shadow-soft bg-white">
+            <img src="omri.jpg" alt="עתר – בקליניקה" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methods -->
+<section id="methods" class="py-16 lg:py-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900 text-right">הקליניקה שלנו</h2>
+    <p class="mt-2 text-slate-600 text-right">מבט קטן אל תוך החללים הפסטורליים והמרגיעים שבהם מתקיימים הטיפולים.</p>
+
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="overflow-hidden rounded-3xl shadow-soft">
+        <img src="bed.jpg" alt="חדר טיפולים מיטה" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
+      </div>
+      <div class="overflow-hidden rounded-3xl shadow-soft">
+        <img src="bed2.jpg" alt="חדר טיפולים נוסף" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
+      </div>
+      <div class="overflow-hidden rounded-3xl shadow-soft">
+        <img src="general.jpg" alt="חלל כללי בקליניקה" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
+      </div>
+      <div class="overflow-hidden rounded-3xl shadow-soft">
+        <img src="house.jpg" alt="מראה חיצוני של הקליניקה" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Testimonials -->
+  <section class="py-16 lg:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">מה הלקוחות מספרים</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <figure class="p-6 rounded-3xl bg-white border border-base-200 shadow-soft">
+          <blockquote class="text-slate-700">“הגעתי עם כאבי גב מתמשכים. אחרי כמה מפגשים הרגשתי שינוי אמיתי – ועדיין מיישמת את התרגילים הקצרים בבית.”</blockquote>
+          <figcaption class="mt-3 text-sm text-slate-500">— ע׳, תל אביב</figcaption>
+        </figure>
+        <figure class="p-6 rounded-3xl bg-white border border-base-200 shadow-soft">
+          <blockquote class="text-slate-700">“מגע עדין, הקשבה סבלנית, ושקט שנשאר גם אחרי. מומלץ בחום.”</blockquote>
+          <figcaption class="mt-3 text-sm text-slate-500">— נ׳, גבעתיים</figcaption>
+        </figure>
+        <figure class="p-6 rounded-3xl bg-white border border-base-200 shadow-soft">
+          <blockquote class="text-slate-700">“קיבלתי כלים קטנים שעושים הבדל גדול ביומיום.”</blockquote>
+          <figcaption class="mt-3 text-sm text-slate-500">— מ׳, רמת גן</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 lg:py-20 bg-gradient-to-b from-base-100 to-base-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">שאלות נפוצות</h2>
+      <div class="mt-6 grid gap-3">
+        <details class="group p-4 rounded-2xl bg-white border border-base-200 shadow-soft">
+          <summary class="cursor-pointer text-slate-900 font-medium flex items-center justify-between gap-4">איך להתכונן לפגישה?
+            <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+          </summary>
+          <p class="mt-3 text-slate-700">בואו בביגוד נעים וללא בושם חזק. אין צורך בהכנה מיוחדת.</p>
+        </details>
+        <details class="group p-4 rounded-2xl bg-white border border-base-200 shadow-soft">
+          <summary class="cursor-pointer text-slate-900 font-medium flex items-center justify-between gap-4">כל כמה זמן מומלץ להגיע?
+            <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+          </summary>
+          <p class="mt-3 text-slate-700">בהתחלה אחת לשבוע‑שבועיים, ובהמשך לפי צורך אישי.</p>
+        </details>
+        <details class="group p-4 rounded-2xl bg-white border border-base-200 shadow-soft">
+          <summary class="cursor-pointer text-slate-900 font-medium flex items-center justify-between gap-4">האם הטיפול מתאים בהריון?
+            <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+          </summary>
+          <p class="mt-3 text-slate-700">כן, בגישה עדינה ותואמת שלב. במידת הצורך – באישור רפואי.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 lg:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">נשמח לדבר</h2>
+          <p class="mt-2 text-slate-600">לקביעת תור או שאלה – השאירו פרטים, או שלחו וואטסאפ.
+          </p>
+          <ul class="mt-6 grid gap-3 text-slate-700">
+            <li>📍כתובת -
+קיבוץ גבעת השלושה
+רחוב עליית הנוער 14</li>
+            <li>📞 <a class="underline decoration-mint-300 underline-offset-4" href="tel:+972500000000">0507852167</a></li>
+            <li>💬 <a class="underline decoration-mint-300 underline-offset-4" href="https://wa.me/972500000000">WhatsApp</a></li>
+            <li>✉️ <a class="underline decoration-mint-300 underline-offset-4" href="mailto:hello@example.com">hello@example.com</a></li>
+          </ul>
+          <div class="mt-6 rounded-2xl overflow-hidden border border-base-200 shadow-soft">
+            <!-- החליפו את ה-src בכתובת של העסק -->
+<iframe 
+  title="מפה" 
+  src="https://www.google.com/maps?q=קיבוץ+גבעת+השלושה&output=embed" 
+  class="w-full h-64 rounded-2xl border-0">
+</iframe>
+          </div>
+        </div>
+        <form class="p-6 rounded-3xl bg-white border border-base-200 shadow-soft grid gap-4" action="https://formspree.io/f/your-id" method="POST">
+          <div>
+            <label for="name" class="block text-sm text-slate-700 mb-1">שם מלא</label>
+            <input id="name" name="name" required class="w-full h-11 px-3 rounded-xl border border-base-300 bg-base-50 focus:outline-none focus:ring-2 focus:ring-mint-300" placeholder="שם" />
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="phone" class="block text-sm text-slate-700 mb-1">טלפון</label>
+              <input id="phone" name="phone" required class="w-full h-11 px-3 rounded-xl border border-base-300 bg-base-50 focus:outline-none focus:ring-2 focus:ring-mint-300" placeholder="050‑..." />
+            </div>
+            <div>
+              <label for="email" class="block text-sm text-slate-700 mb-1">אימייל</label>
+              <input id="email" name="email" type="email" class="w-full h-11 px-3 rounded-xl border border-base-300 bg-base-50 focus:outline-none focus:ring-2 focus:ring-mint-300" placeholder="name@mail.com" />
+            </div>
+          </div>
+          <div>
+            <label for="msg" class="block text-sm text-slate-700 mb-1">כמה מילים על הצורך</label>
+            <textarea id="msg" name="message" rows="4" class="w-full px-3 py-2 rounded-xl border border-base-300 bg-base-50 focus:outline-none focus:ring-2 focus:ring-mint-300" placeholder="איך אפשר לעזור?"></textarea>
+          </div>
+          <button class="h-11 rounded-xl bg-mint-600 text-white hover:bg-mint-700 shadow-soft">שליחה</button>
+          <p class="text-xs text-slate-500">בלחיצה על שליחה אני מאשר/ת יצירת קשר לצורך תיאום.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 border-t border-base-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-600">
+      <p>© <span id="year"></span> עתר – קליניקה לטיפול טבעי</p>
+      <nav class="flex items-center gap-4">
+        <a href="#home" class="hover:text-slate-900">בית</a>
+        <a href="#services" class="hover:text-slate-900">טיפולים</a>
+        <a href="#contact" class="hover:text-slate-900">קשר</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // שנה נוכחית לפוטר
+    document.getElementById('year').textContent = new Date().getFullYear()
+    // תפריט נייד
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn && btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
