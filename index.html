@@ -131,7 +131,7 @@
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-slate-900">
           <br class="hidden sm:block"> חכמת הטבע - ייעוץ וטיפול עבור בני הגיל השלישי
         </h1>
-        <p class="mt-4 text-lg text-slate-700 max-w-xl">ד"ר עתר - הרצאות והעשרה לבני הגיל השלישי, רפלקסולוגית בכירה, גרונטולוגית</p>
+        <p class="mt-4 text-lg text-slate-700 max-w-xl">.ד"ר עתר מילו - גרונטולוגית ורפלקסולוגית בכירה, </p>
         <p class="mt-4 text-lg text-slate-700 max-w-xl"></p> 
          עמרי וייס, היסטוריון וחוקר תרבות, מעסה בכיר (רקמות עמוקות), מומחה לטרפיה בנשימה.</p>
         <div class="mt-8 flex flex-wrap gap-3">
@@ -162,13 +162,20 @@
       <div class="relative">
         <div class="aspect-[4/5] max-w-md lg:max-w-lg mx-auto rounded-3xl overflow-hidden border border-base-200 shadow-soft bg-white">
           <!-- שימי את הקובץ atar.jpg בתיקייה יחד עם ה-HTML -->
+           
           <img src="atar.jpg" alt="עתר – המטפלת" class="w-full h-full object-cover" />
         </div>
         <div class="absolute -bottom-4 -left-2 bg-white/80 backdrop-blur border border-base-200 rounded-2xl px-4 py-2 shadow-soft text-sm">מוסמכת טיפול מגע משולב</div>
+        
       </div>
+              <div class="order-1 lg:order-2">
+          <div class="aspect-[16/12] rounded-3xl overflow-hidden border border-base-200 shadow-soft bg-white">
+            <img src="omri.jpg" alt="עתר – בקליניקה" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      
     </div>
   </div>
-</section>
 
 
   <!-- Services -->
@@ -201,28 +208,7 @@
   </div>
 </section>
 
-  <!-- About -->
-  <section id="about" class="py-16 lg:py-20 bg-gradient-to-b from-base-100 to-base-50">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-[1fr,1.3fr] gap-10 items-center">
-        <div class="order-2 lg:order-1">
-          <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">נעים מאוד, עמרי וייס</h2>
-          <p class="mt-4 text-slate-700 leading-8">היסטוריון וחוקר תרבות
-מעסה בכיר (רקמות עמוקות).
- מומחה לתרפיה בנשימה</p>
-          <ul class="mt-6 grid gap-3 text-slate-700">
-            <!-- <li>• ניסיון בעבודה עם נשים וגברים בכל הגילאים</li>
-            <li>• ת</li> -->
-          </ul>
-        </div>
-        <div class="order-1 lg:order-2">
-          <div class="aspect-[16/12] rounded-3xl overflow-hidden border border-base-200 shadow-soft bg-white">
-            <img src="omri.jpg" alt="עתר – בקליניקה" class="w-full h-full object-cover" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- Methods -->
 <section id="methods" class="py-16 lg:py-20">
@@ -348,6 +334,91 @@
     </div>
   </section>
 
+  <section id="resources" class="py-16 lg:py-20 bg-gradient-to-b from-base-100 to-base-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">מידע נוסף להורדה</h2>
+    <p class="mt-2 text-slate-600">קובץ PDF עם חגים ומועדים בישראל. נוח להדפסה או לצפייה בטלפון.</p>
+
+    <div id="holidaysCard" class="mt-6 p-5 rounded-3xl bg-white border border-base-200 shadow-soft">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <h3 class="text-lg font-semibold text-slate-900"> חגים בישראל <span id="holidaysSize" class="text-slate-500 text-sm"></span></h3>
+          <p class="text-slate-600 mt-1">קובץ PDF: israelHolidays.pdf</p>
+          <p class="text-slate-500 text-sm mt-1">עודכן לאחרונה: <span id="holidaysUpdated">בודק...</span></p>
+          <p id="holidaysNote" class="text-amber-700 text-sm mt-2 hidden"></p>
+
+          <div class="mt-4 flex flex-wrap gap-3">
+            <a id="holidaysDl" href="#" download="israelHolidays.pdf"
+               class="px-4 py-2 rounded-xl bg-mint-600 text-white hover:bg-mint-700">
+              הורדה
+            </a>
+            <a id="holidaysView" href="#" target="_blank" rel="noopener"
+               class="px-4 py-2 rounded-xl border border-base-300 hover:bg-base-100">
+              צפייה בדפדפן
+            </a>
+          </div>
+        </div>
+        <div class="hidden sm:block shrink-0 w-12 h-12 rounded-2xl bg-mint-100 border border-mint-200 grid place-items-center">
+          📄
+        </div>
+      </div>
+      
+
+      <details id="holidaysPreview" class="group mt-5 p-4 rounded-2xl bg-base-50 border border-base-200">
+        <summary class="cursor-pointer text-slate-900 font-medium flex items-center justify-between gap-4">
+          תצוגה מקדימה
+          <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-3">
+          <iframe id="holidaysIframe" title="תצוגה מקדימה - לוח חגים" class="w-full h-96 rounded-xl border-0"></iframe>
+        </div>
+      </details>
+    </div>
+    <div id="articleCard" class="mt-6 p-5 rounded-3xl bg-white border border-base-200 shadow-soft">
+  <div class="flex items-start justify-between gap-4">
+    <div>
+      <h3 class="text-lg font-semibold text-slate-900">
+        מאמר להורדה <span id="articleSize" class="text-slate-500 text-sm"></span>
+      </h3>
+      <p class="text-slate-600 mt-1">קובץ PDF: article.pdf</p>
+      <p class="text-slate-500 text-sm mt-1">עודכן לאחרונה: <span id="articleUpdated">בודק...</span></p>
+      <p class="text-slate-700 text-sm mt-2">
+
+      </p>
+      <p id="articleNote" class="text-amber-700 text-sm mt-2 hidden"></p>
+
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a id="articleDl" href="#" download="article.pdf"
+           class="px-4 py-2 rounded-xl bg-mint-600 text-white hover:bg-mint-700">
+          הורדה
+        </a>
+        <a id="articleView" href="#" target="_blank" rel="noopener"
+           class="px-4 py-2 rounded-xl border border-base-300 hover:bg-base-100">
+          צפייה בדפדפן
+        </a>
+      </div>
+    </div>
+    <div class="hidden sm:block shrink-0 w-12 h-12 rounded-2xl bg-mint-100 border border-mint-200 grid place-items-center">
+      📄
+    </div>
+  </div>
+    <details id="articlePreview" class="group mt-5 p-4 rounded-2xl bg-base-50 border border-base-200">
+    <summary class="cursor-pointer text-slate-900 font-medium flex items-center justify-between gap-4">
+      תצוגה מקדימה
+      <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+    </summary>
+    <div class="mt-3">
+      <iframe id="articleIframe" title="תצוגה מקדימה - מאמר" class="w-full h-96 rounded-xl border-0"></iframe>
+    </div>
+  </details>
+
+  </div>
+  
+</section>
+
+
+
+
   <footer class="py-10 border-t border-base-200 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-600">
       <p>© <span id="year"></span> עתר – קליניקה לטיפול טבעי</p>
@@ -360,14 +431,88 @@
   </footer>
 
   <script>
-    // שנה נוכחית לפוטר
-    document.getElementById('year').textContent = new Date().getFullYear()
-    // תפריט נייד
-    const btn = document.getElementById('menuBtn');
-    const menu = document.getElementById('mobileMenu');
-    btn && btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
+
+    
+   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // תפריט נייד
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn && btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // ===== PDF section logic: supports multiple cards =====
+  (function () {
+    const items = [
+      { prefix: 'holidays', path: 'israelHolidays.pdf', filename: 'israelHolidays.pdf' },
+      { prefix: 'article',  path: 'article.pdf',        filename: 'article.pdf' }
+    ];
+
+    function formatBytes(b) {
+      if (!b) return '';
+      const u = ['B','KB','MB','GB'];
+      const i = Math.floor(Math.log(b) / Math.log(1024));
+      return (b / Math.pow(1024, i)).toFixed(i ? 1 : 0) + ' ' + u[i];
+    }
+
+    function setupOne({ prefix, path, filename }) {
+      const el = (id) => document.getElementById(prefix + id);
+
+      const card    = el('Card');
+      if (!card) return;
+
+      const size    = el('Size');
+      const updated = el('Updated');
+      const note    = el('Note');
+      const aDl     = el('Dl');
+      const aView   = el('View');
+      const prev    = el('Preview');
+      const iframe  = el('Iframe');
+
+      // ברירת מחדל לקישורים
+      aDl.href   = path;
+      aDl.setAttribute('download', filename);
+      aView.href = path;
+
+      fetch(path, { method: 'HEAD' })
+        .then(res => {
+          if (!res.ok) throw new Error('not ok');
+          const len = Number(res.headers.get('content-length')) || 0;
+          if (len && size) size.textContent = `(${formatBytes(len)})`;
+          const lm = res.headers.get('last-modified');
+          if (lm && updated) {
+            const d = new Date(lm);
+            updated.textContent = d.toLocaleDateString('he-IL');
+          } else if (updated) {
+            updated.textContent = 'לא זמין';
+          }
+        })
+        .catch(() => {
+          card.classList.add('opacity-60');
+          if (note) {
+            note.textContent = `הקובץ לא נמצא כרגע. ודאו ש-${filename} נמצא לצד קובץ ה-HTML או עדכנו נתיב.`;
+            note.classList.remove('hidden');
+          }
+          [aDl, aView].forEach(a => {
+            a?.removeAttribute('href');
+            a?.classList.add('pointer-events-none', 'opacity-50');
+          });
+          if (updated) updated.textContent = 'לא זמין';
+          if (size) size.textContent = '';
+        });
+
+      // טעינת תצוגה מקדימה רק בפתיחה
+      prev?.addEventListener('toggle', () => {
+        if (prev.open && iframe && !iframe.src) {
+          iframe.src = path + '#toolbar=0';
+        }
+      });
+    }
+
+    items.forEach(setupOne);
+  })();
+
   </script>
 </body>
 </html>
